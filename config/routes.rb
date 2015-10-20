@@ -4,7 +4,10 @@ Rails.application.routes.draw do
 
   get 'about_us' => "page#about_us"
 
-  get 'contact_us' => "page#contact_us"
+#  get 'contact_us' => "page#contact_us"
+#  post 'contact_us' => "page@contact_us"
+# yukarıdaki iki satırın yerine bu satırı yazdık:
+  match "contact_us" => "page#contact_us", :via => [:post, :get]
 
   get 'products' => "page#products"
 
