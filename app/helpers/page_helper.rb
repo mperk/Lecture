@@ -10,7 +10,7 @@ module PageHelper
     end
 
     cal = ""                #"/page/calendar?month=#{prev_month}&year=#{prev_year}"
-    cal += link_to "Prev", page_calendar_path(:month=>prev_month, :year => prev_year)
+    cal += link_to "Prev",calendar_path(:month=>prev_month, :year => prev_year)
     cal += current_date.strftime("%B")
     day_of_week = current_date.strftime("%w").to_i
     cal += "<table border='1'>\n\t<tr>\n"

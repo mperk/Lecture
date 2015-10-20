@@ -1,5 +1,5 @@
 class SayController < ApplicationController
-  def Hello
+  def hello
     @yo = "YO HO!"
     @now = Time.now
   end

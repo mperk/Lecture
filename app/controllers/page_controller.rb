@@ -25,11 +25,11 @@ class PageController < ApplicationController
       @month = @time.strftime("%m").to_i
     end
     if( @year <= 0 )
-      @year = @time.strftime("%Y").to_i 10.ders bitti
+      @year = @time.strftime("%Y").to_i
     end
   end
 
-  def aricles
+  def articles
   end
 
   def login

@@ -36,8 +36,8 @@ class PageControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get aricles" do
-    get :aricles
+  test "should get articles" do
+    get :articles
     assert_response :success
   end
 

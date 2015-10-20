@@ -1,22 +1,22 @@
 Rails.application.routes.draw do
 
-  get 'page/home'
+  get 'home' =>  "page#home"
 
-  get 'page/about_us'
+  get 'about_us' => "page#about_us"
 
-  get 'page/contact_us'
+  get 'contact_us' => "page#contact_us"
 
-  get 'page/products'
+  get 'products' => "page#products"
 
-  get 'page/newsletter'
+  get 'newsletter'=> "page#newsletter"
 
-  get 'page/blog'
+  get 'blog' =>"page#blog"
 
-  get 'page/calendar(/:year(/:month))' => "page#calendar", :as => 'page_calendar'
+  get 'calendar(/:year(/:month))' => "page#calendar", :as => 'calendar'
 
-  get 'page/aricles'
+  get 'articles' =>   "page#articles"
 
-  get 'page/login'
+  get 'login' => "page#login"
 
   get 'perk/teach'
 
@@ -24,7 +24,7 @@ Rails.application.routes.draw do
 
   get 'perk/dig'
 
-  get 'say/Hello'# => 'say#Hello'
+  get 'say/hello'# => 'say#hello'
   get 'say/goodbye'
   get 'say/something'
 
@@ -32,7 +32,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+   root 'page#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
