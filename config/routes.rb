@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'people/index'
+
   resources :products
   get 'home' =>  "page#home"
 
@@ -84,6 +86,5 @@ Rails.application.routes.draw do
   #   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+  #     #   end
 end
