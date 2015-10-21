@@ -11,6 +11,12 @@ class PageController < ApplicationController
       @error_msg = "Must enter your name!"
     end
     @email = params["email"]
+    @question = params["question"]
+    @newsletter = params["newsletter"] == "newsletter"
+    gender = params["gender"]
+    @male = gender == "Male" #true or false
+    @female = gender == "Female" #true or false
+    @product = params["product"]
   end
 
   def products
