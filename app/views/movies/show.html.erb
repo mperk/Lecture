@@ -2,7 +2,8 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @movie.name %>
+  <%= @movie.proper_name %>
+  <!-- bu titleize Baş harfleri büyütüyor-->
 </p>
 
 <p>
@@ -12,7 +13,7 @@
 
 <p>
   <strong>Description:</strong>
-  <%= @movie.description %>
+  <%= @movie.description.html_safe %>
 </p>
 
 <p>

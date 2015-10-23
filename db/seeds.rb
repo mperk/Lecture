@@ -6,11 +6,35 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-movie = Movie.create(:name => "Mehmet's Book:#{rand(1..100)}",
-                     :director => "Mehmet",
-                     :description => "One long movie",
-                     :year => 2013,
-                     :length => 100,
-                     :format => 'beta'
-)
-puts movie.inspect
+require 'faker'
+include Faker
+formats = %w(Beta WHS IMAX HD SuperHD 4K DVD BlueRay)
+images = %w(skis.jpg boots.jpg poles.jpg)
+
+Movie.destroy_all
+
+100.times do
+
+  movie = Movie.create(:name => "#{Company.bs}",
+                       :director => "#{Name.name}",
+                       :description => Lorem.paragraphs.join("<br/>").html_safe,
+                       :year => rand(1940..2015),
+                       :length => rand(20..240),
+                       :format => formats[ rand(formats.length)],
+                       :image => "movies/" + images[rand(images.length)],
+                       :thumbnail => "movies/" + images[rand(images.length)]
+  )
+  puts movie.inspect
+end
+
+
+
+
+
+
+
+
+
+
+
+
