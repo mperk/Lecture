@@ -34,6 +34,10 @@
   <strong>Image:</strong>
   <%= image_tag @movie.image %>
 </p>
+<p>
+  <strong>Thumbnail Image:</strong>
+  <%= image_tag @movie.thumbnail %>
+</p>
 
 <%= link_to 'Edit', edit_movie_path(@movie) %> |
 <%= link_to 'Back', movies_path %>

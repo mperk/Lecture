@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+movie = Movie.create(:name => "Mehmet's Book:#{rand(1..100)}",
+                     :director => "Mehmet",
+                     :description => "One long movie",
+                     :year => 2013,
+                     :length => 100,
+                     :format => 'beta'
+)
+puts movie.inspect
