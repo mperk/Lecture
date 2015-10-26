@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
 
-  resources :movies
-  get 'people/index'
+  #resources :movies
 
+  resources :movies do
+    get 'page/:page', :action => :index, :on => :collection
+  end
+
+  # resources :my_resources, :concerns => :paginatable
+
+  get 'people/index'
   resources :products
   get 'home' =>  "page#home"
 
