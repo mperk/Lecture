@@ -24,6 +24,16 @@ Movie.destroy_all
                        :image => "movies/" + images[rand(images.length)],
                        :thumbnail => "movies/" + images[rand(images.length)]
   )
+  movie.save
+  if( ! movie.nil?)
+    (rand(0..10)).times do
+      movie.comments.create( :author => "#{Name.name}",
+                             :title => "#{Company.bs}",
+                             :content => Lorem.sentences(3).join("<br/>").html_safe?,
+                             :rating => rand(1..5)
+      )
+    end
+  end
   puts movie.inspect
 end
 

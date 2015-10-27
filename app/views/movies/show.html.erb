@@ -40,5 +40,13 @@
   <%= image_tag @movie.thumbnail %>
 </p>
 
+<% @movie.comments.each do | comment |  %>
+    <h3><%= comment.title %></h3>
+    <h3><%= comment.author %></h3>
+    <p><%= comment.content %></p>
+    <p><%= comment.rating %></p>
+    <hr>
+<% end %>
+
 <%= link_to 'Edit', edit_movie_path(@movie) %> |
 <%= link_to 'Back', movies_path %>
