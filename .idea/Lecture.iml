@@ -218,6 +218,8 @@
     <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.4.1, ruby-2.1.5-p273) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.9.1.1, ruby-2.1.5-p273) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="columnize (v0.9.0, ruby-2.1.5-p273) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="debase (v0.1.1, ruby-2.1.5-p273) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="debase-ruby_core_source (v0.8.0, ruby-2.1.5-p273) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="debug_inspector (v0.0.2, ruby-2.1.5-p273) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="devise (v3.5.2, ruby-2.1.5-p273) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, ruby-2.1.5-p273) [gem]" level="application" />

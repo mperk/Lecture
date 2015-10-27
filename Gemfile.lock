@@ -53,6 +53,9 @@ GEM
       execjs
     coffee-script-source (1.9.1.1)
     columnize (0.9.0)
+    debase (0.1.1)
+      debase-ruby_core_source
+    debase-ruby_core_source (0.8.0)
     debug_inspector (0.0.2)
     devise (3.5.2)
       bcrypt (~> 3.0)
@@ -169,6 +172,7 @@ DEPENDENCIES
   actionview-encoded_mail_to
   byebug
   coffee-rails (~> 4.1.0)
+  debase (= 0.1.1)
   devise
   faker
   jbuilder (~> 2.0)
