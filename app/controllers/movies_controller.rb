@@ -2,7 +2,7 @@ class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
   #before_filter :authenticate_user!, except: [ :index, :show]
   before_filter :authenticate, except: [ :index, :show]
-  #before filter kullanıcı movies sayfalarına giriş yapmadan gidemeyecektir..
+  #before filter içerisinde except; kullanıcı movies sayfalarına giriş yapmadan gidemeyecektir..
 
   # GET /movies
   # GET /movies.json
@@ -17,6 +17,7 @@ class MoviesController < ApplicationController
   # GET /movies/1
   # GET /movies/1.json
   def show
+    @comment = Comment.new
   end
 
   # GET /movies/new

@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :comments
-  resources :comments
+  #resources :comments
   get 'rental/index'
 
   get 'rental/show/:id' => "rental#show", :as => 'rental_show'
@@ -11,6 +10,7 @@ Rails.application.routes.draw do
 
   resources :movies do
     get 'page/:page', :action => :index, :on => :collection
+    resources :comments
   end
 
   # resources :my_resources, :concerns => :paginatable
