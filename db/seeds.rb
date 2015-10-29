@@ -29,7 +29,7 @@ Movie.destroy_all
     (rand(0..10)).times do
       movie.comments.create( :author => "#{Name.name}",
                              :title => "#{Company.bs}",
-                             :content => Lorem.sentences(3).join("<br/>").html_safe?,
+                             :content => Lorem.sen tences(3).join("<br/>").html_safe?,
                              :rating => rand(1..5)
       )
     end
