@@ -47,6 +47,10 @@
     <h3><%= time_ago_in_words(comment.created_at) %> ago, <%= comment.author%> said: </h3>
     <p><%= comment.content.html_safe %></p>
     <p>Rating: <%= stars(comment.rating) %></p>
+    <% if is_admin? %>
+        <%= link_to "Delete Comment", movie_comment_path(@movie, comment),
+                    :confirm => 'Are you sure?', :method => :delete %>
+    <% end %>
     <hr>
 <% end %>
 

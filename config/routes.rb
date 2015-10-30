@@ -6,13 +6,18 @@ Rails.application.routes.draw do
   get 'rental/show/:id' => "rental#show", :as => 'rental_show'
 
   devise_for :users
+  devise_scope :user do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
   #resources :movies
 
   resources :movies do
     get 'page/:page', :action => :index, :on => :collection
     resources :comments
+    #delete 'movie/:id/comments/:comment_id', :controller => :comments, :action => :destroy, :as => "destroy_comment"
   end
 
+  get '/movie/:id/comments/:comment_id' => 'comments#destroy'
   # resources :my_resources, :concerns => :paginatable
 
   get 'people/index'
