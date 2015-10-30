@@ -9,6 +9,7 @@ gem 'faker'
 gem 'kaminari'
 gem 'devise'
 gem 'debase', '0.1.1'
+gem 'tinymce-rails'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'

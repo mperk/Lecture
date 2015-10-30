@@ -9,4 +9,8 @@ module ApplicationHelper
   def stars(num_stars)
     ((image_tag "star.png", :size => "12x12") * num_stars).html_safe
   end
+
+  def is_admin?
+    current_user.try(:admin?)
+  end
 end
