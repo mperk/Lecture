@@ -5,8 +5,12 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version => ruby 2.1.5p273
-* Rails version => rails 4.2.1
+* My Ruby version => ruby 2.1.5p273
+
+* My Rails version => rails 4.2.1
+
+
+** Dave Jones - Ruby on Rails - Lecture **
 
 How do I install rails simply?
 Here: http://railsinstaller.org/en

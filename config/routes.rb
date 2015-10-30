@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
 
+
   #resources :comments
   get 'rental/index'
 
   get 'rental/show/:id' => "rental#show", :as => 'rental_show'
 
+  get 'movie/:id/mail' => "movies#mail", :as => 'mail_movie'
   devise_for :users
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
@@ -17,7 +19,7 @@ Rails.application.routes.draw do
     #delete 'movie/:id/comments/:comment_id', :controller => :comments, :action => :destroy, :as => "destroy_comment"
   end
 
-  get '/movie/:id/comments/:comment_id' => 'comments#destroy'
+  get '/movies/:id/comment/:comment_id' => 'comments#destroy', :as => 'movie_comment_destroy'
   # resources :my_resources, :concerns => :paginatable
 
   get 'people/index'

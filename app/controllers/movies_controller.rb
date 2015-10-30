@@ -1,8 +1,13 @@
 class MoviesController < ApplicationController
-  before_action :set_movie, only: [:show, :edit, :update, :destroy]
+  before_action :set_movie, only: [:show, :edit, :update, :destroy, :mail]
   #before_filter :authenticate_user!, except: [ :index, :show]
   before_filter :authenticate, except: [ :index, :show]
   #before filter içerisinde except; kullanıcı movies sayfalarına giriş yapmadan gidemeyecektir..
+
+
+  def mail
+     UserMailer.newsletter(@movie).deliver
+  end
 
   # GET /movies
   # GET /movies.json
