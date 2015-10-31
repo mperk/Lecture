@@ -49,7 +49,7 @@
     <p>Rating: <%= stars(comment.rating) %></p>
     <% if is_admin? %>
         <%= link_to "Delete Comment", movie_comment_destroy_path(@movie, comment),
-                    :confirm => 'Are you sure?', :method => :delete %>
+                    data:{ confirm: 'Are you sure ?'}, :method => :delete %>
     <% end %>
     <hr>
 <% end %>

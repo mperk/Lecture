@@ -16,11 +16,11 @@ class UserMailer < ApplicationMailer
   #
   #   en.user_mailer.newsletter.subject
   #
-  def newsletter(movie)
+  def newsletter(movie, user)
     @movie = movie
     @greeting = "Hi"
     #@products = Product.all
 
-    mail to: "to@example.org"
+    mail to: user.email
   end
 end

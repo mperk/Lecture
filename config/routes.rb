@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get 'rental/show/:id' => "rental#show", :as => 'rental_show'
 
   get 'movie/:id/mail' => "movies#mail", :as => 'mail_movie'
+  get 'movie/:id/spam' => "movies#spam", :as => 'spam_movie'
+
   devise_for :users
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
