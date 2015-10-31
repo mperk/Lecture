@@ -18,7 +18,8 @@ Here: http://railsinstaller.org/en
 These codes are the lessons here:
 https://www.youtube.com/watch?v=MrGYKo50Dqg&list=PLSXDqiI4sC5PsASjJy7dBncALnhjud2fx
 
-How do I run the project?i
+How do I run the project?
+
 1 => Run with console: git clone https://github.com/mperk/Lecture.git
 2 => Rubymine open project where select Lecture
 3 => Run db:migration by Rubymine
